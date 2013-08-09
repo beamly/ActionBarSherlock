@@ -2,13 +2,13 @@
 bin
 gen
 
-#Eclipse
+# Eclipse
 .project
 .classpath
 .settings
 .checkstyle
 
-#IntelliJ IDEA
+# IntelliJ IDEA
 .idea
 *.iml
 *.ipr
@@ -16,7 +16,11 @@ gen
 classes
 gen-external-apklibs
 
-#Maven
+# Gradle
+.gradle
+build
+
+# Maven
 target
 release.properties
 pom.xml.*
@@ -26,6 +30,6 @@ ant.properties
 local.properties
 proguard.cfg
 
-#Other
+# Other
 .DS_Store
 tmp
