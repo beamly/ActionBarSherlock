@@ -29,16 +29,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.actionbarsherlock.R;
-import com.actionbarsherlock.internal.nineoldandroids.animation.Animator;
-import com.actionbarsherlock.internal.nineoldandroids.animation.Animator.AnimatorListener;
-import com.actionbarsherlock.internal.nineoldandroids.animation.AnimatorSet;
-import com.actionbarsherlock.internal.nineoldandroids.animation.ObjectAnimator;
-import com.actionbarsherlock.internal.nineoldandroids.view.animation.AnimatorProxy;
 import com.actionbarsherlock.internal.nineoldandroids.widget.NineLinearLayout;
 import com.actionbarsherlock.internal.view.menu.ActionMenuPresenter;
 import com.actionbarsherlock.internal.view.menu.ActionMenuView;
 import com.actionbarsherlock.internal.view.menu.MenuBuilder;
 import com.actionbarsherlock.view.ActionMode;
+import com.nineoldandroids.animation.Animator;
+import com.nineoldandroids.animation.Animator.AnimatorListener;
+import com.nineoldandroids.animation.AnimatorSet;
+import com.nineoldandroids.animation.ObjectAnimator;
+import com.nineoldandroids.view.animation.AnimatorProxy;
 
 /**
  * @hide
@@ -136,7 +136,7 @@ public class ActionBarContextView extends AbsActionBarView implements AnimatorLi
         }
     }
 
-    public void setContentHeight(int height) {
+	public void setContentHeight(int height) {
         mContentHeight = height;
     }
 
@@ -211,7 +211,7 @@ public class ActionBarContextView extends AbsActionBarView implements AnimatorLi
 
         View closeButton = mClose.findViewById(R.id.abs__action_mode_close_button);
         closeButton.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
+			public void onClick(View v) {
                 mode.finish();
             }
         });
