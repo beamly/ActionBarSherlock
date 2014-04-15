@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-import com.nineoldandroids.view.animation.AnimatorProxy;
+import com.actionbarsherlock.internal.nineoldandroids.view.animation.AnimatorProxy;
 
 public class NineFrameLayout extends FrameLayout {
     private final AnimatorProxy mProxy;
@@ -26,28 +26,28 @@ public class NineFrameLayout extends FrameLayout {
         super.setVisibility(visibility);
     }
 
-	public float getAlpha() {
+    public float getAlpha() {
         if (AnimatorProxy.NEEDS_PROXY) {
             return mProxy.getAlpha();
         } else {
             return super.getAlpha();
         }
     }
-	public void setAlpha(float alpha) {
+    public void setAlpha(float alpha) {
         if (AnimatorProxy.NEEDS_PROXY) {
             mProxy.setAlpha(alpha);
         } else {
             super.setAlpha(alpha);
         }
     }
-	public float getTranslationY() {
+    public float getTranslationY() {
         if (AnimatorProxy.NEEDS_PROXY) {
             return mProxy.getTranslationY();
         } else {
             return super.getTranslationY();
         }
     }
-	public void setTranslationY(float translationY) {
+    public void setTranslationY(float translationY) {
         if (AnimatorProxy.NEEDS_PROXY) {
             mProxy.setTranslationY(translationY);
         } else {

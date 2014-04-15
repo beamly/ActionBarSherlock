@@ -32,12 +32,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-
 import com.actionbarsherlock.R;
 import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.internal.nineoldandroids.animation.Animator;
+import com.actionbarsherlock.internal.nineoldandroids.animation.ObjectAnimator;
 import com.actionbarsherlock.internal.nineoldandroids.widget.NineHorizontalScrollView;
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.animation.ObjectAnimator;
 
 /**
  * This widget implements the dynamic action bar tab behavior that can change
@@ -246,7 +245,7 @@ public class ScrollingTabContainerView extends NineHorizontalScrollView
             removeCallbacks(mTabSelector);
         }
         mTabSelector = new Runnable() {
-			public void run() {
+            public void run() {
                 final int scrollPos = tabView.getLeft() - (getWidth() - tabView.getWidth()) / 2;
                 smoothScrollTo(scrollPos, 0);
                 mTabSelector = null;
@@ -500,7 +499,7 @@ public class ScrollingTabContainerView extends NineHorizontalScrollView
     }
 
     private class TabClickListener implements OnClickListener {
-		public void onClick(View view) {
+        public void onClick(View view) {
             TabView tabView = (TabView) view;
             tabView.getTab().select();
             final int tabCount = mTabLayout.getChildCount();

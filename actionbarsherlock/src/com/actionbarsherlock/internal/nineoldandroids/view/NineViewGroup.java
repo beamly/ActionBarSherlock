@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 
-import com.nineoldandroids.view.animation.AnimatorProxy;
+import com.actionbarsherlock.internal.nineoldandroids.view.animation.AnimatorProxy;
 
 public abstract class NineViewGroup extends ViewGroup {
     private final AnimatorProxy mProxy;
@@ -34,42 +34,42 @@ public abstract class NineViewGroup extends ViewGroup {
         super.setVisibility(visibility);
     }
 
-	public float getAlpha() {
+    public float getAlpha() {
         if (AnimatorProxy.NEEDS_PROXY) {
             return mProxy.getAlpha();
         } else {
             return super.getAlpha();
         }
     }
-	public void setAlpha(float alpha) {
+    public void setAlpha(float alpha) {
         if (AnimatorProxy.NEEDS_PROXY) {
             mProxy.setAlpha(alpha);
         } else {
             super.setAlpha(alpha);
         }
     }
-	public float getTranslationX() {
+    public float getTranslationX() {
         if (AnimatorProxy.NEEDS_PROXY) {
             return mProxy.getTranslationX();
         } else {
             return super.getTranslationX();
         }
     }
-	public void setTranslationX(float translationX) {
+    public void setTranslationX(float translationX) {
         if (AnimatorProxy.NEEDS_PROXY) {
             mProxy.setTranslationX(translationX);
         } else {
             super.setTranslationX(translationX);
         }
     }
-	public float getTranslationY() {
+    public float getTranslationY() {
         if (AnimatorProxy.NEEDS_PROXY) {
             return mProxy.getTranslationY();
         } else {
             return super.getTranslationY();
         }
     }
-	public void setTranslationY(float translationY) {
+    public void setTranslationY(float translationY) {
         if (AnimatorProxy.NEEDS_PROXY) {
             mProxy.setTranslationY(translationY);
         } else {
